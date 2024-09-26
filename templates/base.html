@@ -1,0 +1,279 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" type="image/png" href="static/favicon.png">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="hrjeet singh - AKTU University" >
+
+<style>
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+#nav {
+  list-style-type: none;
+  margin-top:5px;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(2, 1, 1, 0.986);
+  border-radius: 30px;
+}
+h2
+{
+  color: #0ac6f5;
+}
+
+/*.li {
+  float: left;
+}
+
+.li a {
+  display: block;
+  color: #393f4d;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 14px 16px;
+  text-decoration: none;
+}*/
+#nav li a:hover{
+    color: red
+}
+#nav li a{
+    padding: 3px 3px;
+    text-decoration: none;
+    color: rgb(10, 224, 252);
+}
+#nav li{
+    float:left;
+    list-style: none; 
+    margin: 13px 20px;
+}
+#nav ul{
+    overflow: auto;
+}
+
+#nav input{
+    border: 2px solid black;
+    border-radius: 14px;
+    padding: 3px 17px;
+    width: 129px;
+}
+
+/*li a:hover {
+  background-color: #61523f;
+  color: #feda6a;
+  font-weight: bold;
+}*/
+.form-style button{
+
+  width: 89%;
+	height:70%;
+	padding: 5%;
+	background: #feda6a;
+	border-bottom: 2px solid #393f4d;;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	color: #393f4d;
+  font-weight: bold;
+  font-size: 28px;
+  font-family: "Times New Roman";
+  
+}
+
+.form-style button:hover {
+  background-color: #393f4d;
+  color: #feda6a;
+  font-weight: bold;
+  
+}
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 50;
+  overflow-x: hidden;
+  padding-top: 20px;
+
+}
+
+.left {
+  left: 15;
+  border-right: 0px #feda6a solid;
+}
+
+.right {
+  right: 0;
+  border-left: 1px #feda6a solid;
+}
+
+.mytext {
+    border:1px solid #393f4d;
+    border-right:none;
+    padding:4px;
+    margin:0px;
+    float:left;
+    height:32px;
+    overflow:hidden;
+    line-height:16px;
+    width: 300px;
+    margin-left: 54px;
+  }
+
+  .mic {
+      border:1px solid #393f4d;
+      background:#feda6a;
+      vertical-align:top;
+      padding:0px;
+      margin:0;
+      float:left;
+      height:42px;
+      overflow:hidden;
+      width:5em;
+      text-align:center;
+      line-height:16px;
+  }
+  
+
+.submit {
+    border:1px solid #393f4d;
+    height: 42px;
+    width: 160px;
+    text-align: center;
+    background-color: #feda6a;
+    color: #393f4d;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: "Times New Roman";
+    vertical-align:top;
+}
+.submit:hover {
+  background-color: #393f4d;
+  color: #feda6a;
+  font-weight: bold;
+}
+.td {
+  color: #feda6a;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+body
+{
+  background-color: #c48181
+
+}
+
+.form-style{
+	font: 95% Arial, Helvetica, sans-serif;
+	max-width: 400px;
+	margin: 10px auto;
+	padding: 16px;
+  
+}
+.form-style h1, .form-style a{
+	padding: 20px 0;
+  font-size: 24px;
+	font-weight: bold;
+  font-family: "Times New Roman";
+	text-align: center;
+	margin: -16px -16px 16px -16px;
+  color:#feda6a
+}
+.form-style input[type="text"],
+.form-style input[type="password"],
+.form-style input[type="date"],
+.form-style input[type="datetime"],
+.form-style input[type="email"],
+.form-style input[type="number"],
+.form-style input[type="search"],
+.form-style input[type="time"],
+.form-style input[type="url"],
+.form-style textarea,
+.form-style select
+{
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	background: rgb(19, 15, 15);
+	margin-bottom: 4%;
+	border: 1px solid rgb(255, 255, 255);
+	padding: 3%;
+	color:#06f5e1 ;
+	font: 95% Arial, Helvetica, sans-serif;
+}
+.form-style input[type="text"]:focus,
+.form-style input[type="password"]:focus,
+.form-style input[type="date"]:focus,
+.form-style input[type="datetime"]:focus,
+.form-style input[type="email"]:focus,
+.form-style input[type="number"]:focus,
+.form-style input[type="search"]:focus,
+.form-style input[type="time"]:focus,
+.form-style input[type="url"]:focus,
+.form-style textarea:focus,
+.form-style select:focus
+{
+	box-shadow: 0 0 5px #00f7ff;
+	padding: 3%;
+	border: 1px solid #05eeff;
+}
+
+.site-form span,label{
+  color: #0a0909;
+}
+.errorlist{
+    color: red;
+    font-weight: bold;
+}
+</style>
+<title>Voice to sign Language</title>
+
+</head>
+
+<body>
+<ul id="nav">
+  <!--<a href="https://fetrbs.org" class="active" style="position: absolute;right: 2%;"><img src="static/rbslogo.png" style="margin-top: 1px; padding-right: 2%;width: 54%;height: 110%;"></a>-->
+
+  <li class="li"><a class="active" href="{% url 'home' %}">Home</a></li>
+  <li class="li"><a href="{% url 'animation' %}">Convertor</a></li>
+  {% if not user.is_authenticated %}
+  <li class="li"><a href="{% url 'signup' %}">Sign Up</a></li>
+  {% endif %}
+  {% if user.is_authenticated %}
+  <li class="li"><a href="{% url 'logout' %}">Log-Out</a></li>
+  {% else %}
+    <li class="li"><a href="{% url 'login' %}">Log-in</a></li>
+  {% endif %}
+  <li class="li"><a href="{% url 'contact' %}">Contact</a></li>
+  <li class="li"><a href="{% url 'about' %}">About</a></li>
+  
+</ul>
+<div style="background-color:#11ebeb;color:#7c641d;padding:10 10 1 10;border: 0px #000000 groove;margin-bottom:0;">
+  
+    <h1 align=center><marquee direction="left-right" width="50%"  scrollamount="12%" behavior="alternate">Voice To Sign Language Tool</marquee></h1>
+  
+  </div>
+  <br>
+
+<div class="wrapper" >
+  {% block content %}
+  {% endblock %}
+</div>
+
+
+</body>
+</html>
